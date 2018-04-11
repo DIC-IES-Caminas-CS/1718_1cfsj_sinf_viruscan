@@ -1,5 +1,6 @@
 #!/bin/bash
 # Simple script to launch antivirus tools
+#first version
 
 # Include functions from other file
 source tools.sh
