@@ -1,6 +1,7 @@
 # File that contains functions for antivirus launcher whatthevirus.sh
 # don not execute it directly
 # version 1
+# version 2
 
 simple_menu () {
   echo "Please, write an option:"
