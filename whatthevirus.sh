@@ -3,24 +3,38 @@
 
 # Include functions from other file
 source tools.sh
-
 # Main body
-Action=$(simple_menu)
-case $Action in
-  1 )
-    freshclam
-    ;;
 
-  2 )
-    Directory=$(provide_dir)
-    clamscan $directory
-    ;;
+clear
+while true
+do
+  simple_menu
+  case $Option in
+    1 )
+      echo "1 .- Install"
+      sudo apt-get install clamav clamav-daemon -y
+      ;;
 
-  * )
-    echo "sorry, wrong option"
-    exit 1
-    ;;
+    2 )
+      echo "3 .- Scan all"
+      sudo freshclam
+      ;;
+
+    3 )
+      directory=$(provide_dir)
+      clamscan $directory
+      ;;
+
+    5 )
+      echo "Exit"
+      exit 1
+      ;;
+
+    * )
+      echo "sorry, wrong option"
+      exit 1
+      ;;
 
   esac
-
-  exit 0
+done
+exit 0
