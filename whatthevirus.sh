@@ -6,7 +6,7 @@ source tools.sh
 
 # Main body
 Action=$(simple_menu)
-case $Action
+case $Action in
   1 )
     freshclam
     ;;
@@ -17,7 +17,7 @@ case $Action
     ;;
 
   * )
-    echo "sorry, wong option"
+    echo "sorry, wrong option"
     exit 1
     ;;
 
