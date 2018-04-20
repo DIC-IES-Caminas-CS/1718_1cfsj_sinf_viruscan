@@ -2,6 +2,8 @@
 source tools.sh
 clear
 
+while true
+do
 HEIGHT=20
 WIDTH=70
 CHOICE_HEIGHT=8
@@ -24,6 +26,10 @@ CHOICE=$(dialog --clear \
                 2>&1 >/dev/tty)
 
 clear
+
+
+
+
 case $CHOICE in
         1)
             #echo "You chose Scanner all"
@@ -35,8 +41,9 @@ case $CHOICE in
             ;;
         3)
             #echo "You chose Option 3"
-            directory=$(provide_dir)
-            clamscan $directory
+            provide_dir
+            echo "Scanning "$Dir"..."
+            clamscan /$Dir
             ;;
         4)
             #echo "You chose Option 4"
@@ -51,3 +58,5 @@ case $CHOICE in
             exit 1
             ;;
 esac
+done
+exit 0

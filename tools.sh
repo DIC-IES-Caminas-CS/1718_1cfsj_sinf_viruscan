@@ -18,5 +18,5 @@ echo "Introduce your option: "
 provide_dir () {
   echo "Please, provide a directory to scan"
   read $Dir
-exit $Dir
+#exit $Dir
 }
