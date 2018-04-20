@@ -1,6 +1,6 @@
 # File that contains functions for antivirus launcher whatthevirus.sh
 # don not execute it directly
-
+# Cambio
 simple_menu () {
   echo "Please, write an option:"
   echo "1 .- Install"
@@ -18,5 +18,5 @@ echo "Introduce your option: "
 provide_dir () {
   echo "Please, provide a directory to scan"
   read $Dir
-exit $Dir
+#exit $Dir
 }

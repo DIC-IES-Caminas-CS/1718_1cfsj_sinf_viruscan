@@ -29,8 +29,9 @@ do
 
     3 )
       echo "3 .- Scan directory, write one directory and press enter."
-      directory=$(provide_dir)
-      clamscan $directory
+      provide_dir
+      echo "Scanning " $Dir"...""
+      clamscan /$Dir
       ;;
 
     4 )
